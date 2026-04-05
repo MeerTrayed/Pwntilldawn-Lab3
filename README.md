@@ -19,5 +19,6 @@ Has
 | ssh  | Close  |
 | http  | Close  |
 | microsoft-ds  | Close  | <br/>
+
  2.`gobuster dir -u http://10.150.150.11 -w /usr/share/wordlists/dirb/common.txt -x php,txt,bak`
  
