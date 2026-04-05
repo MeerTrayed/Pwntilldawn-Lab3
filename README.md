@@ -1,7 +1,7 @@
 # Pwntilldawn-Lab3
 1. Looking for ip
    `nmap -sn 10.150.150.0/24` 
-   (Picture)
+   ![img alt](https://github.com/MeerTrayed/Pwntilldawn-Lab3/blob/b02f18d8ccc71979ce958a7433e7e6822b9eb294/0.png)
    
    or even better do this `nmap -p 80,21,22,445 10.150.150.0/24`)<br/>
 Note this for:<br/>
