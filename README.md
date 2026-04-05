@@ -36,7 +36,7 @@ Has several HTTP links we can try to access<br>
 4. Inside http://10.150.150.11, there's a decent directory to get into, which is the addedituser.php
    Create a user with an admin role
 
-  Extra: Access to admin account using simple tricks (Inspect Q). change type=password into type=text
+  Extra: Access to the admin account using simple tricks (Inspect Q). change "type=password" into "type=text"
   ![img alt](https://github.com/MeerTrayed/Pwntilldawn-Lab3/blob/689a0289a1d23ae13be1d2ecc1ce3bec52b8a57e/6.png)
 
 5. Create a simple webshell to run commands through the browser.
