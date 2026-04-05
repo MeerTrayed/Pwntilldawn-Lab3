@@ -27,10 +27,10 @@ Has
 
 Has several HTTP links we can try to access<br>
 
- 3. i. /Admin
+ 3. i. /Admin<br/>
     ![img alt](https://github.com/MeerTrayed/Pwntilldawn-Lab3/blob/689a0289a1d23ae13be1d2ecc1ce3bec52b8a57e/4.png)
 
-   ii. /upload
+   ii. /upload<br/>
    ![img alt](https://github.com/MeerTrayed/Pwntilldawn-Lab3/blob/689a0289a1d23ae13be1d2ecc1ce3bec52b8a57e/5.png)
 
 4. Inside http://10.150.150.11, there's a decent directory to get into, which is the addedituser.php
