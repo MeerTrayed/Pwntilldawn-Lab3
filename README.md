@@ -3,8 +3,8 @@
    `nmap -sn 10.150.150.0/24` 
    (Picture)
    
-   or even better do this `nmap -p 80,21,22,445 10.150.150.0/24`)
-Note this for:
+   or even better do this `nmap -p 80,21,22,445 10.150.150.0/24`)<br/>
+Note this for:<br/>
   This tells Nmap to ONLY scan specific ports instead of all ports: <br/>
 80 → HTTP (web server)
 21 → FTP (file transfer)
