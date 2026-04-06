@@ -14,8 +14,8 @@ Note this for:<br/>
 
 Doing 10.150.150.11 <br/>
 Has 
-| Service  |  State 
-| ------------- | ------------- |
+| Service  |  State |
+| ------------- | ------------- 
 | ftp | Close  | 
 | ssh  | Close  |
 | http  | Close  |
